@@ -1,4 +1,5 @@
 import axios from "axios"
+// import { BASE_URL } from "../utils/constants";
 
 
 function getLoggedInUser(){
@@ -14,6 +15,7 @@ function setLoggedInUser(userData){
 
 
 async function login(authData) {
+    // const url = `${BASE_URL}/api/users/login`;
     const url = `/api/users/login`;
     console.log(authData);
     try{
@@ -36,6 +38,7 @@ async function login(authData) {
 
 
 async function logout() {
+    // const url = `${BASE_URL}/api/users/logout`
     const url = `/api/users/logout`
     try{
         await axios({
@@ -53,6 +56,7 @@ async function logout() {
 }
 
 async function signup(userData) {
+    // const url = `${BASE_URL}/api/users/new`
     const url = `/api/users/new`
     try{
         const response =await axios({
@@ -73,6 +77,7 @@ async function signup(userData) {
 
 
 async function fetchUserProfile() {
+    // const url = `${BASE_URL}/api/users/profile`
     const url = `/api/users/profile`
     try{
         const response =await axios({
@@ -91,6 +96,7 @@ async function fetchUserProfile() {
 
 
 async function updateProfile(profileData) {
+    // const url = `${BASE_URL}/api/users/profile-edit`;
     const url = `/api/users/profile-edit`;
     // console.log(profileData);
     try{
@@ -111,6 +117,7 @@ async function updateProfile(profileData) {
 }
 
 async function updatePassword(profileData) {
+    // const url = `${BASE_URL}/api/users/password-edit`;
     const url = `/api/users/password-edit`;
     // console.log(profileData);
     try{

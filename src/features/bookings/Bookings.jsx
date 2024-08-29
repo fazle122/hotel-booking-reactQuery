@@ -40,7 +40,7 @@ export default function Booking(){
     // if(isLoading) return <CircularProgressItem />
 
 
-    if(isError) return <p>Something went wrong.</p>
+    if(isError) return <p className="flex items-center justify-center h-screen">Something went wrong.</p>
     const bookingData = bookings?.data?.bookings;
     const totalBookings = bookings?.data?.count;
     const totalPageCount = bookings?.data?.pages;

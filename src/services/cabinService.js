@@ -1,10 +1,12 @@
 import axios from "axios";
+// import { BASE_URL } from "../utils/constants";
 
 
 
 async function fetchCabinData({filters}) {
     console.log(filters)
-    var url = `https://hotel-booking-backend-kohl.vercel.app/api/cabins`;
+    // var url = `${BASE_URL}/api/cabins`;
+    var url = `/api/cabins`;
     console.log(url);
     try{
         const response = await axios({
@@ -27,6 +29,7 @@ async function fetchCabinData({filters}) {
 
 async function fetchAvailableCabinData({filters}) {
     console.log(filters)
+    // var url = `${BASE_URL}/api/cabins/top`;
     var url = `/api/cabins/top`;
     console.log(url);
     try{
@@ -50,6 +53,7 @@ async function fetchAvailableCabinData({filters}) {
 
 async function fetchCabinDetail(id) {
     console.log(id);
+    // var url = `${BASE_URL}/api/cabins/${id}`;
     var url = `/api/cabins/${id}`;
     try{
         const response = await axios({
@@ -71,7 +75,8 @@ async function fetchCabinDetail(id) {
 
 
 async function createNewCabin(cabinData) {
-    var url = `api/cabins/new`;
+    // var url = `${BASE_URL}/api/cabins/new`;
+    var url = `/api/cabins/new`;
     console.log(cabinData);
     const newCabinData = {
         name:cabinData['name'],
@@ -100,7 +105,8 @@ async function createNewCabin(cabinData) {
 }
 
 async function updateCabinData({id,cabinData}) {
-    var url = `api/cabins/${id}`;
+    // var url = `${BASE_URL}/api/cabins/${id}`;
+    var url = `/api/cabins/${id}`;
     console.log(cabinData);
     console.log(id);
     const newCabinData = {
@@ -130,6 +136,7 @@ async function updateCabinData({id,cabinData}) {
 }
 
 async function uploadCabinImage(id,data) {
+    // var url = `${BASE_URL}/api/cabins/${id}/upload_images`;
     var url = `/api/cabins/${id}/upload_images`;
     console.log(data);
     console.log(id);
@@ -151,6 +158,7 @@ async function uploadCabinImage(id,data) {
 }
 
 async function deleteCabinImage(id,data) {
+    // var url = `${BASE_URL}/api/cabins/${id}/delete_image`;
     var url = `/api/cabins/${id}/delete_image`;
     console.log(id);
     console.log(data);
@@ -176,7 +184,8 @@ async function deleteCabinImage(id,data) {
 
 
 async function deleteCabin(id){
-    var url = `api/cabins/${id}`;
+    // var url = `${BASE_URL}/api/cabins/${id}`;
+    var url = `/api/cabins/${id}`;
 
     try{
         const response = await axios({
