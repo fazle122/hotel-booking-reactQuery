@@ -4,7 +4,7 @@ import axios from "axios";
 
 async function fetchCabinData({filters}) {
     console.log(filters)
-    var url = `/api/cabins`;
+    var url = `https://hotel-booking-backend-kohl.vercel.app/api/cabins`;
     console.log(url);
     try{
         const response = await axios({
