@@ -6,7 +6,6 @@ import eslint from 'vite-plugin-eslint'
 export default defineConfig({
   server:{
     proxy:{
-      // '/api':'http://localhost:8000'
       '/api':'https://hotel-booking-backend-kohl.vercel.app'
     }
   },
