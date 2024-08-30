@@ -9,13 +9,13 @@ export default defineConfig({
     //   // '/api':'http://localhost:8000'
     //   '/api':'https://hotel-booking-backend-kohl.vercel.app'
     // }
-    proxy: {
-      '/api': {
-        target: 'https://hotel-booking-backend-kohl.vercel.app',
-        changeOrigin: true,
-        secure: false,
-      }
-    }
+    // proxy: {
+    //   '/api': {
+    //     target: 'https://hotel-booking-backend-kohl.vercel.app',
+    //     changeOrigin: true,
+    //     secure: false,
+    //   }
+    // }
   },
   plugins: [react(),eslint()],
 })

@@ -1,5 +1,5 @@
 import axios from "axios"
-// import { BASE_URL } from "../utils/constants";
+import { BASE_URL } from "../utils/constants";
 
 
 
@@ -10,8 +10,8 @@ async function fetchAllBookings({filters}){
     // const guestCountParams = filters.map((filter) => filter?.key == 'numOfGuests' ? filter?.value : undefined);
     // console.log(guestCountParams);
 
-    // const url = `${BASE_URL}/api/bookings` ;
-    const url = `/api/bookings` ;
+    const url = `${BASE_URL}/api/bookings` ;
+    // const url = `/api/bookings` ;
 
     try{
         const data = await axios({
@@ -38,8 +38,8 @@ async function fetchAllBookings({filters}){
 
 
 async function fetchBookingDetal(id){
-    // const url = `${BASE_URL}/api/bookings/${id}` 
-    const url = `/api/bookings/${id}` 
+    const url = `${BASE_URL}/api/bookings/${id}` 
+    // const url = `/api/bookings/${id}` 
     // console.log(id);
 
     try{
@@ -60,15 +60,16 @@ async function fetchBookingDetal(id){
 
 
 async function fetchBookedDates(id) {
-    // var url = `${BASE_URL}/api/bookings/dates/${id}`;
-    var url = `/api/bookings/dates/${id}`;
+    var url = `${BASE_URL}/api/bookings/dates/${id}`;
+    // var url = `/api/bookings/dates/${id}`;
     try{
         const data = await axios({
             method:'get',
             url,
             headers:{
                 'Content-Type':'application/json'
-            }
+            },
+
         });
         // console.log(data);
         return data;
@@ -81,8 +82,8 @@ async function fetchBookedDates(id) {
 
 
 async function createBooking(bookingData){
-    // const url = `${BASE_URL}/api/bookings/new`
-    const url = `/api/bookings/new`
+    const url = `${BASE_URL}/api/bookings/new`
+    // const url = `/api/bookings/new`
     try{
         const data = await axios({
             method:'post',
@@ -102,8 +103,8 @@ async function createBooking(bookingData){
 
 
 async function updateBookingData(id,bookingData){
-    // const url = `${BASE_URL}/api/bookings/${id}` 
-    const url = `/api/bookings/${id}` 
+    const url = `${BASE_URL}/api/bookings/${id}` 
+    // const url = `/api/bookings/${id}` 
     console.log(bookingData)
     console.log(id)
 
@@ -126,8 +127,8 @@ async function updateBookingData(id,bookingData){
 
 
 async function deleteBookingData(id,cabinId){
-    // const url = `${BASE_URL}/api/bookings/${id}` 
-    const url = `/api/bookings/${id}` 
+    const url = `${BASE_URL}/api/bookings/${id}` 
+    // const url = `/api/bookings/${id}` 
     console.log(cabinId);
     try{
         const data = await axios({
@@ -149,8 +150,8 @@ async function deleteBookingData(id,cabinId){
 
 
 async function createPayment(paymentData) {
-    // const url = `${BASE_URL}/api/payment/getPayment` 
-    const url = `/api/payment/getPayment` 
+    const url = `${BASE_URL}/api/payment/getPayment` 
+    // const url = `/api/payment/getPayment` 
     console.log(paymentData);
 
     try{
