@@ -20,10 +20,7 @@ async function fetchAllBookings({filters}){
             headers:{
                 'Content-Type' : 'application/json'
             },
-            // params:{
-            //     status:statusParams,
-            //     numOfGuests:guestCountParams
-            // }
+            withCredentials:true,
             params: filters
         });
         console.log(data);
@@ -49,6 +46,7 @@ async function fetchBookingDetal(id){
             headers:{
                 'Content-Type' : 'application/json'
             },
+            withCredentials:true,
         });
         // console.log(data);
         return data;
@@ -69,6 +67,7 @@ async function fetchBookedDates(id) {
             headers:{
                 'Content-Type':'application/json'
             },
+            withCredentials:true,
 
         });
         // console.log(data);
@@ -91,6 +90,7 @@ async function createBooking(bookingData){
             headers:{
                 'Content-Type' : 'application/json'
             },
+            withCredentials:true,
             data:bookingData
         });
         console.log(data);
@@ -115,6 +115,7 @@ async function updateBookingData(id,bookingData){
             headers:{
                 'Content-Type' : 'application/json'
             },
+            withCredentials:true,
             data:bookingData
         });
         console.log(data);
@@ -137,6 +138,7 @@ async function deleteBookingData(id,cabinId){
             headers:{
                 'Content-Type' : 'application/json'
             },
+            withCredentials:true,
             data:cabinId
             // params:cabinId
         });
@@ -161,6 +163,7 @@ async function createPayment(paymentData) {
             headers:{
                 'Content-Type' : 'application/json'
             },
+            withCredentials:true,
             data:paymentData
         });
         console.log(response);

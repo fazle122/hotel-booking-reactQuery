@@ -14,9 +14,9 @@ async function fetchCabinData({filters}) {
             url,
             headers:{
                 'Content-Type':'application/json',
-                "Access-Control-Allow-Origin": "*"
+                // "Access-Control-Allow-Origin": "*"
             },
-            // withCredentials:true,
+            withCredentials:true,
             params:filters
         });
         console.log(response);
@@ -42,6 +42,7 @@ async function fetchAvailableCabinData({filters}) {
                 'Content-Type':'application/json',
                 "Access-Control-Allow-Origin": "*"
             },
+            withCredentials:true,
             params:filters
         });
         console.log(response);
@@ -66,6 +67,7 @@ async function fetchCabinDetail(id) {
                 'Content-Type':'application/json',
                 "Access-Control-Allow-Origin": "*"
             },
+            withCredentials:true,
 
         });
         // console.log(response);
@@ -99,6 +101,7 @@ async function createNewCabin(cabinData) {
                 'Content-Type' : 'application/json',
                 "Access-Control-Allow-Origin": "*"
             },
+            withCredentials:true,
             data:newCabinData
         });
         // console.log(response);
@@ -130,6 +133,7 @@ async function updateCabinData({id,cabinData}) {
             headers:{
                 'Content-Type' : 'application/json'
             },
+            withCredentials:true,
             data:newCabinData
         });
         // console.log(response);
@@ -153,6 +157,7 @@ async function uploadCabinImage(id,data) {
             headers:{
                 'Content-Type' : 'application/json'
             },
+            withCredentials:true,
             data
         });
         console.log(response);
@@ -176,6 +181,7 @@ async function deleteCabinImage(id,data) {
             headers:{
                 'Content-Type' : 'application/json'
             },
+            withCredentials:true,
             data:data
         });
         console.log(response);
@@ -199,8 +205,9 @@ async function deleteCabin(id){
             url,
             headers:{
                 'Content-Type':'application/json',
-                'Access-Control-Allow-Credentials':true
             },
+            withCredentials:true,
+
         })
         // console.log(response);
         return response;

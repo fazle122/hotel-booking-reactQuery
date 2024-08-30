@@ -24,10 +24,10 @@ async function login(authData) {
             url,
             headers:{
                 'Content-Type' : 'application/json',
-                'Access-Control-Allow-Origin': '*',
-               'Access-Control-Allow-Credentials':true
+                // 'Access-Control-Allow-Origin': '*',
+                // 'Access-Control-Allow-Credentials':true
             },
-            // withCredentials:true,
+            withCredentials:true,
             data:authData
         })
         console.log(responseData);
@@ -50,7 +50,7 @@ async function logout() {
             headers:{
                 'Content-Type' : 'application/json'
             },
-
+            withCredentials:true,
         })
     }catch(err){
         console.log(err);
@@ -69,6 +69,7 @@ async function signup(userData) {
             headers:{
                 'Content-Type' : 'application/json'
             },
+            withCredentials:true,
             data:userData
         })
         console.log(response);
@@ -90,6 +91,7 @@ async function fetchUserProfile() {
             headers:{
                 'Content-Type' : 'application/json'
             },
+            withCredentials:true,
 
         })
         // console.log(response);
@@ -111,6 +113,7 @@ async function updateProfile(profileData) {
             headers:{
                 'Content-Type' : 'application/json'
             },
+            withCredentials:true,
             data:profileData
         })
         // console.log(response);
@@ -132,6 +135,7 @@ async function updatePassword(profileData) {
             headers:{
                 'Content-Type' : 'application/json'
             },
+            withCredentials:true,
             data:profileData
         })
         // console.log(response);
